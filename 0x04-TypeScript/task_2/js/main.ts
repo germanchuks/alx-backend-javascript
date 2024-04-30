@@ -70,7 +70,20 @@ const executeWork = (employee: Director | Teacher) : void => {
     }
 }
 
+// String literal allowing only two values; Math or History
+type Subjects = 'Math' | 'History';
 
-// executeWork(createEmployee(200));
-// executeWork(createEmployee(1000));
+// Function to teach class
+const teachClass = (todayClass: Subjects) : string => {
+    if (todayClass === 'Math') {
+        return 'Teaching Math';
+    } else if (todayClass === 'History') {
+        return 'Teaching History';
+    } else {
+        return '';
+    }
+}
+
+// console.log(teachClass('Math'));
+// console.log(teachClass('History'));
 
