@@ -6,7 +6,7 @@ describe('getPaymentTokenFromAPI', () => {
   it('resolves with success data when success is true', (done) => {
     getPaymentTokenFromAPI(true)
       .then((data) => {
-        expect(data).toEqual({ data: 'Successful response from the API' });
+        expect(data).to.eql({ data: 'Successful response from the API' });
         done();
       })
       .catch((error) => {
