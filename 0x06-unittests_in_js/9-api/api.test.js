@@ -22,9 +22,9 @@ describe('Index page', () => {
 
 describe('Cart page', () => {
   it('Correct status code when :id is a number?', (done) => {
-    request(`${baseUrl}/cart/12`, (err, res, body) => {
+    request(`${baseUrl}/cart/123`, (err, res, body) => {
       expect(res.statusCode).to.equal(200);
-      expect(body).to.equal('Payment methods for cart 12');
+      expect(body).to.equal('Payment methods for cart 123');
       done();
     });
   });
